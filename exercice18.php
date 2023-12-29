@@ -1,15 +1,8 @@
 <?php
-$rows = 10;
-
-for ($i = $rows; $i >= 1; $i--) {
-    for ($j = $rows - $i; $j >= 0; $j--) {
-        echo "&nbsp;&nbsp;";
-    }
-
-    for ($k = 1; $k <= $i; $k++) {
+for ($i = 1; $i <= 10; $i++) {
+    for ($j = 1; $j <= $i; $j++) {
         echo $i;
     }
-
     echo "<br>";
 }
 ?>

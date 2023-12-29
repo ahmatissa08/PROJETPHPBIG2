@@ -50,7 +50,7 @@
 </head>
 <body>
 
-    <h1>Capitalizer</h1>
+    <h1>Chaines des caracteres</h1>
 
     <form action="process.php" method="post">
         <label for="inputStrings">Saisissez les chaînes de caractères (séparées par des virgules) :</label>

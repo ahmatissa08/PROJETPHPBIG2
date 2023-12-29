@@ -1,16 +1,10 @@
 <?php
- $nombreInitial = 456;
- $tirage = 0;
- $nombreTire =0;
- while ($nombreTire !== $nombreInitial){
-    $nombreTire = rand (100,999);
-    $tirage++; 
+ $nombre = 20;
+ if ($nombre % 3 === 0 && $nombre % 5 === 0){
+    echo "Le nombre est un multiple de 3 et de 5.";
  }
- echo "Nombre initial : $nombreInitial <br>";
- echo "Nombre de tirages necessaires avec while : $tirage <br>";
- $tirage =0;
- $nombreTire =0;
- echo "Nombre initial : $nombreInitial<br>";
- echo "Nombre de tirage nécessaires avec for :$tirage <br>";
-
+ else
+ {
+    echo "Le nombre n'est pas un multiple de 3 et de 5.";
+ }
  ?>

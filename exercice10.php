@@ -1,67 +1,15 @@
-<?php
-
-// Exercice 8 : Tableau multidimensionnel associatif
-$personnes_exercice8 = array(
-    'personne1' => array(
-        'prenom' => 'Jean',
-        'ville' => 'Paris',
-        'age' => 30
-    ),
-    'personne2' => array(
-        'prenom' => 'Marie',
-        'ville' => 'Lyon',
-        'age' => 25
-    ),
-    'personne3' => array(
-        'prenom' => 'Pierre',
-        'ville' => 'Marseille',
-        'age' => 35
-    ),
-    // Ajoutez d'autres personnes au besoin
-);
-
-// Exercice 9 : Tableau multidimensionnel associatif avec des tableaux associatifs
-$personnes_exercice9 = array(
-    'personne1' => array(
-        'info' => array(
-            'prenom' => 'Jean',
-            'ville' => 'Paris',
-            'age' => 30
-        )
-    ),
-    'personne2' => array(
-        'info' => array(
-            'prenom' => 'Marie',
-            'ville' => 'Lyon',
-            'age' => 25
-        )
-    ),
-    'personne3' => array(
-        'info' => array(
-            'prenom' => 'Pierre',
-            'ville' => 'Marseille',
-            'age' => 35
-        )
-    ),
-    // Ajoutez d'autres personnes au besoin
-);
-
-?>
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture des Tableaux</title>
+    <title>Exercices 8 et 9 - Utilisation de foreach</title>
+
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 20px;
-        }
-
-        h1 {
-            color: #333;
+            padding: 20px;
         }
 
         table {
@@ -72,7 +20,7 @@ $personnes_exercice9 = array(
 
         th, td {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 8px;
             text-align: left;
         }
 
@@ -83,49 +31,91 @@ $personnes_exercice9 = array(
 </head>
 <body>
 
-    <h1>Lecture des Tableaux</h1>
+<?php
+// Exercice 8 - Tableau multidimensionnel associatif
+$personnesExercice8 = array(
+    'Moussa' => array(
+        'prenom' => 'ISSA SOUGUI',
+        'ville' => 'DAKAR',
+        'age' => 21
+    ),
+    'Alice' => array(
+        'prenom' => 'Alice',
+        'ville' => 'Paris',
+        'age' => 25
+    ),
+    'Bob' => array(
+        'prenom' => 'Bob',
+        'ville' => 'London',
+        'age' => 35
+    ),
+    
+);
 
-    <!-- Exercice 8 -->
-    <h2>Exercice 8</h2>
-    <table>
-        <tr>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Ville de Résidence</th>
-            <th>Âge</th>
-        </tr>
-        <?php
-        foreach ($personnes_exercice8 as $nom => $info) {
-            echo "<tr>";
-            echo "<td>$nom</td>";
-            echo "<td>{$info['prenom']}</td>";
-            echo "<td>{$info['ville']}</td>";
-            echo "<td>{$info['age']}</td>";
-            echo "</tr>";
-        }
-        ?>
-    </table>
+// Exercice 9 - Tableau multidimensionnel associatif
+$personnesExercice9 = array(
+    'Moussa' => array(
+        'prenom' => 'ISSA SOUGUI',
+        'ville' => 'DAKAR',
+        'age' => 21
+    ),
+    'Alice' => array(
+        'prenom' => 'Alice',
+        'ville' => 'Paris',
+        'age' => 25
+    ),
+    'Bob' => array(
+        'prenom' => 'Bob',
+        'ville' => 'London',
+        'age' => 35
+    ),
+    
+);
+?>
 
-    <!-- Exercice 9 -->
-    <h2>Exercice 9</h2>
-    <table>
-        <tr>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Ville de Résidence</th>
-            <th>Âge</th>
-        </tr>
-        <?php
-        foreach ($personnes_exercice9 as $nom => $info) {
-            echo "<tr>";
-            echo "<td>$nom</td>";
-            echo "<td>{$info['info']['prenom']}</td>";
-            echo "<td>{$info['info']['ville']}</td>";
-            echo "<td>{$info['info']['age']}</td>";
-            echo "</tr>";
-        }
-        ?>
-    </table>
+<h2>Exercice 8 - Tableau des personnes</h2>
+<table>
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Ville de résidence</th>
+        <th>Âge</th>
+    </tr>
+
+    <?php
+    // Utilisation d'une boucle foreach pour lire le tableau de l'exercice 8
+    foreach ($personnesExercice8 as $nom => $infos) {
+        echo "<tr>";
+        echo "<td>$nom</td>";
+        echo "<td>" . $infos['prenom'] . "</td>";
+        echo "<td>" . $infos['ville'] . "</td>";
+        echo "<td>" . $infos['age'] . "</td>";
+        echo "</tr>";
+    }
+    ?>
+</table>
+
+<h2>Exercice 9 - Tableau des personnes</h2>
+<table>
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Ville de résidence</th>
+        <th>Âge</th>
+    </tr>
+
+    <?php
+    // Utilisation d'une boucle foreach pour lire le tableau de l'exercice 9
+    foreach ($personnesExercice9 as $nom => $infos) {
+        echo "<tr>";
+        echo "<td>$nom</td>";
+        echo "<td>" . $infos['prenom'] . "</td>";
+        echo "<td>" . $infos['ville'] . "</td>";
+        echo "<td>" . $infos['age'] . "</td>";
+        echo "</tr>";
+    }
+    ?>
+</table>
 
 </body>
 </html>
